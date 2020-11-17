@@ -56,7 +56,7 @@ body{
 }
 
 #new-quote{
-    margin-top: 20px;
+    margin-top: 18px;
     cursor: pointer;
     font-size: 1.2rem;
     height: 2.5rem;
@@ -76,26 +76,6 @@ body{
 #new-quote:active{
     transform: translate(0, 0.3rem);
     box-shadow: 0 0.1rem rgba( 255, 255, 255, 0.65);
-}
-
-#twitter{
-    background-color: transparent;
-    border: none;
-}
-
-#twitter:active{
-    background-color: transparent;
-    border: none;
-}
-
-#twitter:visited{
-    background-color: transparent;
-    border: none;
-}
-
-#twitter:link{
-    background-color: transparent;
-    border: none;
 }
 
 a{

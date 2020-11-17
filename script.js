@@ -43,17 +43,27 @@ async function getQuote(){
         } else{
             quoteText.classList.remove('long-quote');
         }
-
         quoteText.innerText = data.quoteText;
         hideLoadingSpinner();
+        
     } catch(error){
-        if(counter > 10){
-            console.log('Whoops no Quote'+ error);
-            counter = 0;
-        } else{
-            getQuote();
-            counter++;
+
+        if(error instanceof SyntaxError){
+            console.log(error);
+            quoteContainer.innerText = "No Quote fetched...Please refresh the page";
+            quoteContainer.style.fontSize = "3rem";
+            hideLoadingSpinner();
         }
+        // if(counter > 10){
+        //     quoteContainer.innerText = "No Quote fetched...Please refresh the page";
+        //     console.log('Whoops no Quote '+ error);
+        //     counter = 0;
+        // } else{
+        //     if(getQuote())
+        //         counter = 0;
+        //     else
+        //         counter++;
+        // }
     }
 }
 
